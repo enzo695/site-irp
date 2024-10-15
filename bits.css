@@ -1,0 +1,234 @@
+/* bits.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Importando fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Patrick+Hand:wght@400&display=swap');
+
+/* Cores do tema */
+:root {
+    --primary-color: #ff512f; /* Cor primária para botões */
+    --secondary-color: #dd2476; /* Cor secundária para botões */
+    --accent-color: #1e90ff; /* Azul brilhante para contrastar */
+}
+
+/* Estilos do body */
+body {
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(135deg, #141e30 0%, #243b55 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    z-index: -1; /* Faz com que fique atrás do conteúdo */
+}
+
+/* Estilo para a caixa de formulário */
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7); /* Sombra mais forte */
+    backdrop-filter: blur(15px);
+    text-align: center;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.container:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8); /* Sombra mais forte no hover */
+}
+
+h1 {
+    font-size: 36px; /* Aumenta o tamanho da fonte */
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 3px; /* Aumenta o espaçamento das letras */
+    background: linear-gradient(90deg, #000000, #000000); /* Gradiente colorido */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8); /* Sombra mais intensa para destaque */
+    animation: glow 1.5s infinite alternate; /* Animação de brilho */
+}
+
+
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.input-group {
+    position: relative;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+    width: 100%;
+    padding: 15px 25px;
+    border: 2px solid transparent; /* Borda inicial invisível */
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.35);
+    font-size: 16px;
+    color: #ffffff;
+    transition: all 0.4s ease, border 0.3s ease; /* Suaviza a transição da borda */
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+    outline: none;
+}
+
+input[type="text"]:hover,
+input[type="number"]:hover,
+input[type="email"]:hover {
+    background: rgba(255, 255, 255, 0.4); /* Leve alteração no fundo */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.15);
+    border-color: var(--accent-color); /* Muda a cor da borda no foco */
+}
+
+button.btn1 {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); /* Gradiente para botões */
+    color: #fff;
+    padding: 18px;
+    border: none;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.4s ease; /* Suaviza as mudanças */
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 10px 30px rgba(221, 36, 118, 0.5);
+}
+
+button.btn1:hover {
+    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color)); /* Troca de cores ao passar o mouse */
+    box-shadow: 0 15px 40px rgba(221, 36, 118, 0.5), inset 0 0 5px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px) scale(1.02); /* Leve elevação e aumento */
+}
+
+button.btn1:active {
+    transform: scale(0.95);
+}
+
+#resultado {
+    margin-top: 30px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    border: 2px solid var(--primary-color); /* Borda mais chamativa */
+    display: none;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos de animação para input focus */
+input[type="text"]:focus::placeholder,
+input[type="number"]:focus::placeholder,
+input[type="email"]:focus::placeholder {
+    color: transparent;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder,
+input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+/* Animação de fade-in suave para o formulário */
+.container {
+    opacity: 1; /* Corrigido: adicionei um valor de opacidade para a animação funcionar */
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajuste para a classe .irp-container */
+.irp-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    padding: 5px 10px;
+    max-width: 300px; /* Ajustado para um tamanho mais adequado */
+    width: auto;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6); /* Sombra mais forte */
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #ffffff;
+    font-family: 'Patrick Hand', cursive; /* Fonte manuscrita */
+    font-size: 18px; /* Ajustado para mais legível */
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap; /* Garante que o texto não quebre */
+    overflow: hidden; /* Esconde o texto que excede o container */
+    text-overflow: ellipsis; /* Adiciona reticências se o texto for muito longo */
+}
+
+.irp-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8); /* Sombra mais forte no hover */
+}
+
+/* Estilos para o texto da classe .irp */
+.irp {
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Aumentado o sombreado para maior destaque */
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 24px; /* Reduzir tamanho do título em telas menores */
+    }
+
+    .irp-container {
+        max-width: 90%; /* Ajusta a largura em telas menores */
+    }
+}

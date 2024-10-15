@@ -1,0 +1,723 @@
+Array
+(
+    [resource] => https://api.mercadolibre.com/merchant_orders/23911953961
+    [topic] => merchant_order
+)
+Erro: dados da sessão não estão disponíveis.
+Array
+(
+    [action] => payment.created
+    [api_version] => v1
+    [data] => Array
+        (
+            [id] => 1319920228
+        )
+
+    [date_created] => 2024-10-15T15:24:45Z
+    [id] => 116406334377
+    [live_mode] => 
+    [type] => payment
+    [user_id] => 512066256
+)
+Input recebido: Array
+(
+    [resource] => https://api.mercadolibre.com/merchant_orders/23913022005
+    [topic] => merchant_order
+)
+
+Input após processamento: Array
+(
+    [resource] => https://api.mercadolibre.com/merchant_orders/23913022005
+    [topic] => merchant_order
+)
+Input recebido: Array
+(
+    [action] => payment.created
+    [api_version] => v1
+    [data] => Array
+        (
+            [id] => 1319918778
+        )
+
+    [date_created] => 2024-10-15T15:48:30Z
+    [id] => 116406761235
+    [live_mode] => 
+    [type] => payment
+    [user_id] => 512066256
+)
+
+Resposta do pagamento: Array
+(
+    [accounts_info] => 
+    [acquirer_reconciliation] => Array
+        (
+        )
+
+    [additional_info] => Array
+        (
+            [authentication_code] => 
+            [available_balance] => 
+            [ip_address] => 187.66.237.165
+            [items] => Array
+                (
+                    [0] => Array
+                        (
+                            [category_id] => 
+                            [description] => 
+                            [id] => 
+                            [picture_url] => 
+                            [quantity] => 1
+                            [title] => Compra de Bits
+                            [unit_price] => 3
+                        )
+
+                )
+
+            [nsu_processadora] => 
+            [payer] => Array
+                (
+                    [first_name] => DONO_L7
+                )
+
+        )
+
+    [authorization_code] => 301299
+    [binary_mode] => 
+    [brand_id] => 
+    [build_version] => 3.74.0-rc-3
+    [call_for_authorize_id] => 
+    [captured] => 1
+    [card] => Array
+        (
+            [cardholder] => Array
+                (
+                    [identification] => Array
+                        (
+                            [number] => 12345678909
+                            [type] => CPF
+                        )
+
+                    [name] => APRO
+                )
+
+            [country] => 
+            [date_created] => 2024-10-15T11:48:30.000-04:00
+            [date_last_updated] => 2024-10-15T11:48:30.000-04:00
+            [expiration_month] => 11
+            [expiration_year] => 2025
+            [first_six_digits] => 503143
+            [id] => 
+            [last_four_digits] => 6351
+            [tags] => 
+        )
+
+    [charges_details] => Array
+        (
+            [0] => Array
+                (
+                    [accounts] => Array
+                        (
+                            [from] => collector
+                            [to] => mp
+                        )
+
+                    [amounts] => Array
+                        (
+                            [original] => 0.15
+                            [refunded] => 0
+                        )
+
+                    [client_id] => 0
+                    [date_created] => 2024-10-15T11:48:30.000-04:00
+                    [id] => 1319918778-001
+                    [last_updated] => 2024-10-15T11:48:30.000-04:00
+                    [metadata] => Array
+                        (
+                            [source] => rule-engine
+                        )
+
+                    [name] => mercadopago_fee
+                    [refund_charges] => Array
+                        (
+                        )
+
+                    [reserve_id] => 
+                    [type] => fee
+                )
+
+        )
+
+    [collector_id] => 512066256
+    [corporation_id] => 
+    [counter_currency] => 
+    [coupon_amount] => 0
+    [currency_id] => BRL
+    [date_approved] => 2024-10-15T11:48:30.493-04:00
+    [date_created] => 2024-10-15T11:48:30.110-04:00
+    [date_last_updated] => 2024-10-15T11:48:30.493-04:00
+    [date_of_expiration] => 
+    [deduction_schema] => 
+    [description] => Compra de Bits
+    [differential_pricing_id] => 
+    [external_reference] => 
+    [fee_details] => Array
+        (
+            [0] => Array
+                (
+                    [amount] => 0.15
+                    [fee_payer] => collector
+                    [type] => mercadopago_fee
+                )
+
+        )
+
+    [financing_group] => 
+    [id] => 1319918778
+    [installments] => 1
+    [integrator_id] => 
+    [issuer_id] => 24
+    [live_mode] => 
+    [marketplace_owner] => 
+    [merchant_account_id] => 
+    [merchant_number] => 
+    [metadata] => Array
+        (
+        )
+
+    [money_release_date] => 2024-10-15T11:48:30.493-04:00
+    [money_release_schema] => 
+    [money_release_status] => released
+    [notification_url] => https://dbb2-2804-14d-1c8b-943a-c1fe-16bb-1fb7-e6c1.ngrok-free.app/abc/processar_pagamento.php
+    [operation_type] => regular_payment
+    [order] => Array
+        (
+            [id] => 23913022005
+            [type] => mercadopago
+        )
+
+    [payer] => Array
+        (
+            [identification] => Array
+                (
+                    [number] => 32659430
+                    [type] => DNI
+                )
+
+            [entity_type] => 
+            [phone] => Array
+                (
+                    [number] => 
+                    [extension] => 
+                    [area_code] => 
+                )
+
+            [last_name] => 
+            [id] => 2027923574
+            [type] => 
+            [first_name] => 
+            [email] => test_user_80507629@testuser.com
+        )
+
+    [payment_method] => Array
+        (
+            [data] => Array
+                (
+                    [routing_data] => Array
+                        (
+                            [merchant_account_id] => 103
+                        )
+
+                )
+
+            [id] => master
+            [issuer_id] => 24
+            [type] => credit_card
+        )
+
+    [payment_method_id] => master
+    [payment_type_id] => credit_card
+    [platform_id] => 
+    [point_of_interaction] => Array
+        (
+            [business_info] => Array
+                (
+                    [branch] => Merchant Services
+                    [sub_unit] => checkout_pro
+                    [unit] => online_payments
+                )
+
+            [transaction_data] => Array
+                (
+                    [e2e_id] => 
+                )
+
+            [type] => CHECKOUT
+        )
+
+    [pos_id] => 
+    [processing_mode] => aggregator
+    [refunds] => Array
+        (
+        )
+
+    [release_info] => 
+    [shipping_amount] => 0
+    [sponsor_id] => 
+    [statement_descriptor] => Mercadopago*fake
+    [status] => approved
+    [status_detail] => accredited
+    [store_id] => 
+    [tags] => 
+    [taxes_amount] => 0
+    [transaction_amount] => 3
+    [transaction_amount_refunded] => 0
+    [transaction_details] => Array
+        (
+            [acquirer_reference] => 
+            [external_resource_url] => 
+            [financial_institution] => 
+            [installment_amount] => 3
+            [net_received_amount] => 2.85
+            [overpaid_amount] => 0
+            [payable_deferral_period] => 
+            [payment_method_reference_id] => 
+            [total_paid_amount] => 3
+        )
+
+)
+
+Erro: dados da sessão não estão disponíveis.
+Input após processamento: Array
+(
+    [action] => payment.created
+    [api_version] => v1
+    [data] => Array
+        (
+            [id] => 1319918778
+        )
+
+    [date_created] => 2024-10-15T15:48:30Z
+    [id] => 116406761235
+    [live_mode] => 
+    [type] => payment
+    [user_id] => 512066256
+)
+Input recebido: Array
+(
+    [resource] => https://api.mercadolibre.com/merchant_orders/23926402270
+    [topic] => merchant_order
+)
+
+Input após processamento: Array
+(
+    [resource] => https://api.mercadolibre.com/merchant_orders/23926402270
+    [topic] => merchant_order
+)
+Input recebido: Array
+(
+    [action] => payment.created
+    [api_version] => v1
+    [data] => Array
+        (
+            [id] => 1319918916
+        )
+
+    [date_created] => 2024-10-15T15:52:22Z
+    [id] => 116454603130
+    [live_mode] => 
+    [type] => payment
+    [user_id] => 512066256
+)
+
+Resposta do pagamento: Array
+(
+    [accounts_info] => 
+    [acquirer_reconciliation] => Array
+        (
+        )
+
+    [additional_info] => Array
+        (
+            [authentication_code] => 
+            [available_balance] => 
+            [ip_address] => 187.66.237.165
+            [items] => Array
+                (
+                    [0] => Array
+                        (
+                            [category_id] => 
+                            [description] => 
+                            [id] => 
+                            [picture_url] => 
+                            [quantity] => 1
+                            [title] => Compra de Bits
+                            [unit_price] => 1
+                        )
+
+                )
+
+            [nsu_processadora] => 
+            [payer] => Array
+                (
+                    [first_name] => DONO_L7
+                )
+
+        )
+
+    [authorization_code] => 301299
+    [binary_mode] => 
+    [brand_id] => 
+    [build_version] => 3.74.0-rc-3
+    [call_for_authorize_id] => 
+    [captured] => 1
+    [card] => Array
+        (
+            [cardholder] => Array
+                (
+                    [identification] => Array
+                        (
+                            [number] => 12345678909
+                            [type] => CPF
+                        )
+
+                    [name] => APRO
+                )
+
+            [country] => 
+            [date_created] => 2024-10-15T11:52:22.000-04:00
+            [date_last_updated] => 2024-10-15T11:52:22.000-04:00
+            [expiration_month] => 11
+            [expiration_year] => 2025
+            [first_six_digits] => 503143
+            [id] => 
+            [last_four_digits] => 6351
+            [tags] => 
+        )
+
+    [charges_details] => Array
+        (
+            [0] => Array
+                (
+                    [accounts] => Array
+                        (
+                            [from] => collector
+                            [to] => mp
+                        )
+
+                    [amounts] => Array
+                        (
+                            [original] => 0.05
+                            [refunded] => 0
+                        )
+
+                    [client_id] => 0
+                    [date_created] => 2024-10-15T11:52:22.000-04:00
+                    [id] => 1319918916-001
+                    [last_updated] => 2024-10-15T11:52:22.000-04:00
+                    [metadata] => Array
+                        (
+                            [source] => rule-engine
+                        )
+
+                    [name] => mercadopago_fee
+                    [refund_charges] => Array
+                        (
+                        )
+
+                    [reserve_id] => 
+                    [type] => fee
+                )
+
+        )
+
+    [collector_id] => 512066256
+    [corporation_id] => 
+    [counter_currency] => 
+    [coupon_amount] => 0
+    [currency_id] => BRL
+    [date_approved] => 2024-10-15T11:52:23.221-04:00
+    [date_created] => 2024-10-15T11:52:22.652-04:00
+    [date_last_updated] => 2024-10-15T11:52:23.221-04:00
+    [date_of_expiration] => 
+    [deduction_schema] => 
+    [description] => Compra de Bits
+    [differential_pricing_id] => 
+    [external_reference] => 
+    [fee_details] => Array
+        (
+            [0] => Array
+                (
+                    [amount] => 0.05
+                    [fee_payer] => collector
+                    [type] => mercadopago_fee
+                )
+
+        )
+
+    [financing_group] => 
+    [id] => 1319918916
+    [installments] => 1
+    [integrator_id] => 
+    [issuer_id] => 24
+    [live_mode] => 
+    [marketplace_owner] => 
+    [merchant_account_id] => 
+    [merchant_number] => 
+    [metadata] => Array
+        (
+        )
+
+    [money_release_date] => 2024-10-15T11:52:23.221-04:00
+    [money_release_schema] => 
+    [money_release_status] => released
+    [notification_url] => https://dbb2-2804-14d-1c8b-943a-c1fe-16bb-1fb7-e6c1.ngrok-free.app/abc/processar_pagamento.php
+    [operation_type] => regular_payment
+    [order] => Array
+        (
+            [id] => 23926402270
+            [type] => mercadopago
+        )
+
+    [payer] => Array
+        (
+            [identification] => Array
+                (
+                    [number] => 32659430
+                    [type] => DNI
+                )
+
+            [entity_type] => 
+            [phone] => Array
+                (
+                    [number] => 
+                    [extension] => 
+                    [area_code] => 
+                )
+
+            [last_name] => 
+            [id] => 2027923574
+            [type] => 
+            [first_name] => 
+            [email] => test_user_80507629@testuser.com
+        )
+
+    [payment_method] => Array
+        (
+            [data] => Array
+                (
+                    [routing_data] => Array
+                        (
+                            [merchant_account_id] => 103
+                        )
+
+                )
+
+            [id] => master
+            [issuer_id] => 24
+            [type] => credit_card
+        )
+
+    [payment_method_id] => master
+    [payment_type_id] => credit_card
+    [platform_id] => 
+    [point_of_interaction] => Array
+        (
+            [business_info] => Array
+                (
+                    [branch] => Merchant Services
+                    [sub_unit] => checkout_pro
+                    [unit] => online_payments
+                )
+
+            [transaction_data] => Array
+                (
+                    [e2e_id] => 
+                )
+
+            [type] => CHECKOUT
+        )
+
+    [pos_id] => 
+    [processing_mode] => aggregator
+    [refunds] => Array
+        (
+        )
+
+    [release_info] => 
+    [shipping_amount] => 0
+    [sponsor_id] => 
+    [statement_descriptor] => Mercadopago*fake
+    [status] => approved
+    [status_detail] => accredited
+    [store_id] => 
+    [tags] => 
+    [taxes_amount] => 0
+    [transaction_amount] => 1
+    [transaction_amount_refunded] => 0
+    [transaction_details] => Array
+        (
+            [acquirer_reference] => 
+            [external_resource_url] => 
+            [financial_institution] => 
+            [installment_amount] => 1
+            [net_received_amount] => 0.95
+            [overpaid_amount] => 0
+            [payable_deferral_period] => 
+            [payment_method_reference_id] => 
+            [total_paid_amount] => 1
+        )
+
+)
+
+Erro: dados da sessão não estão disponíveis.
+Input após processamento: Array
+(
+    [action] => payment.created
+    [api_version] => v1
+    [data] => Array
+        (
+            [id] => 1319918916
+        )
+
+    [date_created] => 2024-10-15T15:52:22Z
+    [id] => 116454603130
+    [live_mode] => 
+    [type] => payment
+    [user_id] => 512066256
+)
+Array
+(
+    [resource] => https://api.mercadolibre.com/merchant_orders/23926663776
+    [topic] => merchant_order
+)
+Array
+(
+    [action] => payment.created
+    [api_version] => v1
+    [data] => Array
+        (
+            [id] => 1327618047
+        )
+
+    [date_created] => 2024-10-15T15:57:38Z
+    [id] => 116406940599
+    [live_mode] => 
+    [type] => payment
+    [user_id] => 512066256
+)
+Array
+(
+    [resource] => https://api.mercadolibre.com/merchant_orders/23926735124
+    [topic] => merchant_order
+)
+Array
+(
+    [action] => payment.created
+    [api_version] => v1
+    [data] => Array
+        (
+            [id] => 1319920824
+        )
+
+    [date_created] => 2024-10-15T15:59:08Z
+    [id] => 116406945629
+    [live_mode] => 
+    [type] => payment
+    [user_id] => 512066256
+)
+Array
+(
+    [resource] => https://api.mercadolibre.com/merchant_orders/23913528295
+    [topic] => merchant_order
+)
+Array
+(
+    [action] => payment.created
+    [api_version] => v1
+    [data] => Array
+        (
+            [id] => 1327618103
+        )
+
+    [date_created] => 2024-10-15T16:00:14Z
+    [id] => 116406964927
+    [live_mode] => 
+    [type] => payment
+    [user_id] => 512066256
+)
+Array
+(
+    [resource] => https://api.mercadolibre.com/merchant_orders/23913636161
+    [topic] => merchant_order
+)
+Array
+(
+    [action] => payment.created
+    [api_version] => v1
+    [data] => Array
+        (
+            [id] => 1319920914
+        )
+
+    [date_created] => 2024-10-15T16:02:50Z
+    [id] => 116454793910
+    [live_mode] => 
+    [type] => payment
+    [user_id] => 512066256
+)
+Array
+(
+    [resource] => https://api.mercadolibre.com/merchant_orders/23913898715
+    [topic] => merchant_order
+)
+Array
+(
+    [resource] => 90295766955
+    [topic] => payment
+)
+Array
+(
+    [resource] => https://api.mercadolibre.com/merchant_orders/23913898715
+    [topic] => merchant_order
+)
+Erro: pagamento não aprovado ou resposta inválida.
+Array
+(
+    [action] => payment.created
+    [api_version] => v1
+    [data] => Array
+        (
+            [id] => 90295766955
+        )
+
+    [date_created] => 2024-10-15T16:08:35Z
+    [id] => 116454868836
+    [live_mode] => 1
+    [type] => payment
+    [user_id] => 512066256
+)
+Array
+(
+    [resource] => 90295766955
+    [topic] => payment
+)
+Array
+(
+    [resource] => https://api.mercadolibre.com/merchant_orders/23913898715
+    [topic] => merchant_order
+)
+Array
+(
+    [action] => payment.updated
+    [api_version] => v1
+    [data] => Array
+        (
+            [id] => 90295766955
+        )
+
+    [date_created] => 2024-10-15T16:08:35Z
+    [id] => 116407135837
+    [live_mode] => 1
+    [type] => payment
+    [user_id] => 512066256
+)

@@ -1,0 +1,6 @@
+body {
+    background-size: cover; /* Garante que a imagem de fundo cubra toda a tela */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-position: center center; /* Centraliza a imagem no meio da tela */
+    transition: background-image 1s ease-in-out; /* Suaviza a transição entre as imagens */
+}

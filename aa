@@ -1,0 +1,65 @@
+<?php
+// webhook_pagamento.php
+
+// Iniciar sessão para acessar os dados armazenados
+session_start();
+
+// Receber notificação do Mercado Pago
+$input = json_decode(file_get_contents("php://input"), true);
+
+// Verificar se o tipo da notificação é de pagamento
+if ($input['type'] == 'payment') {
+    $payment_id = $input['data']['id'];
+
+    // Conferir o status do pagamento
+    $access_token = 'TEST-1467490049744598-100818-d584df1c1bcf967787e47f3923db2f05-512066256';
+    $url = "https://api.mercadopago.com/v1/payments/{$payment_id}";
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        'Authorization: Bearer ' . $access_token
+    ]);
+
+    $response = curl_exec($ch);
+    curl_close($ch);
+
+    $payment_info = json_decode($response, true);
+
+    // Conectar ao banco de dados
+    $host = "190.102.40.7";
+    $banco = "rafaelc_irp";
+    $user = "rafaelc_2739";
+    $senha_user = "AVuWCST06!Pr";
+
+    // Se o pagamento foi aprovado, registrar os bits no banco
+    if ($payment_info['status'] == 'approved') {
+        // Conectar ao banco de dados
+        $con = mysqli_connect($host, $user, $senha_user, $banco);
+
+        if (!$con) {
+            die("Falha na conexão: " . mysqli_connect_error());
+        }
+
+        // Atualizar a tabela de bits
+        $nick = $_SESSION['nick'];
+        $id = $_SESSION['id'];
+        $bits = $_SESSION['bits'];
+        $sql = "INSERT INTO irp (nome, id, bits) VALUES ('$nick', '$id', '$bits')";
+
+        if (mysqli_query($con, $sql)) {
+            // Aqui você pode registrar uma mensagem de sucesso em um log, se desejar
+            error_log("Bits atualizados com sucesso para $nick ($id): $bits bits.");
+        } else {
+            error_log("Erro ao atualizar bits: " . mysqli_error($con));
+        }
+
+        mysqli_close($con);
+        session_destroy(); // Limpar sessão após atualização
+    } else {
+        // Se o pagamento não foi aprovado, você pode registrar a falha em um log
+        error_log("Pagamento não aprovado: $payment_id");
+    }
+}
+?>
